@@ -5,9 +5,15 @@ import * as RecipeAPI from "./recipe-api";
 const app = express();
 
 app.use(express.json()); // Converts body of requests & responses to JSON
-app.use(cors()); // Allows for cross-origin requests
+// CORS configuration
+app.use(
+  cors({
+    origin: "https://recipe-oukjatatt-kurais-projects-2013c57e.vercel.app", // Replace with your domain
+  })
+); // Allows for cross-origin requests
 
-app.listen(5000, () => console.log("Server running on localhost:5000"));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log("Server running on localhost:5000"));
 
 app.get("/api/recipes/search", async (req, res) => {
   console.log(req.query);
