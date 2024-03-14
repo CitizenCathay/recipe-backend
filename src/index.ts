@@ -7,9 +7,7 @@ const app = express();
 app.use(express.json()); // Converts body of requests & responses to JSON
 app.use(
   cors({
-    origin: ["https://recipe-oukjatatt-kurais-projects-2013c57e.vercel.app"],
-    methods: ["POST", "GET"],
-    credentials: true,
+    origin: "https://recipe-oukjatatt-kurais-projects-2013c57e.vercel.app",
   })
 ); // Allows for cross-origin requests
 
