@@ -4,7 +4,8 @@
   "description": "",
   "main": "./src/index.ts",
   "scripts": {
-    "start": "npx nodemon"
+    "start": "npx nodemon",
+    "vercel-build": "echo hello"
   },
   "author": "",
   "license": "ISC",
@@ -13,12 +14,12 @@
     "dotenv": "^16.4.5",
     "express": "^4.18.3",
     "nodemon": "^3.1.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
-    "@types/node": "^20.11.24"
+    "@types/node": "^20.11.24",
+    "typescript": "^5.4.2"
   }
 }
