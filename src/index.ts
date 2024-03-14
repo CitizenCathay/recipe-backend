@@ -5,10 +5,11 @@ import * as RecipeAPI from "./recipe-api";
 const app = express();
 
 app.use(express.json()); // Converts body of requests & responses to JSON
-// CORS configuration
 app.use(
   cors({
-    origin: "https://recipe-oukjatatt-kurais-projects-2013c57e.vercel.app", // Replace with your domain
+    origin: ["https://recipe-oukjatatt-kurais-projects-2013c57e.vercel.app/"],
+    methods: ["POST", "GET"],
+    credentials: true,
   })
 ); // Allows for cross-origin requests
 
