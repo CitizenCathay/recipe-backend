@@ -7,6 +7,8 @@ const app = express();
 app.use(express.json()); // Converts body of requests & responses to JSON
 app.use(cors()); // Allows for cross-origin requests
 
+app.listen(5000, () => console.log("Server running on localhost:5000"));
+
 app.get("/api/recipes/search", async (req, res) => {
   console.log(req.query);
 
@@ -18,4 +20,4 @@ app.get("/api/recipes/search", async (req, res) => {
   return res.json(results);
 });
 
-app.listen(5000, () => console.log("Server running on localhost:5000"));
+module.exports = app;
