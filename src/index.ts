@@ -5,11 +5,7 @@ import * as RecipeAPI from "./recipe-api";
 const app = express();
 
 app.use(express.json()); // Converts body of requests & responses to JSON
-app.use(
-  cors({
-    origin: "*",
-  })
-); // Allows for cross-origin requests
+app.use(cors()); // Allows for cross-origin requests
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log("Server running on localhost:5000"));
