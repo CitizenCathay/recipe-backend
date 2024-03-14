@@ -18,4 +18,4 @@ app.get("/api/recipes/search", async (req, res) => {
   return res.json(results);
 });
 
-module.exports = app;
+app.listen(5000, () => console.log("Server running on localhost:5000"));
