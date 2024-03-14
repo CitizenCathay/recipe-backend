@@ -105,6 +105,8 @@ export const searchRecipes = async (searchTerm: string, page: number) => {
   }
 };
 
+/* Future implementation */
+/*
 export const trendingRecipes = async (searchCuisine: string, page: number) => {
   if (!apiKey) {
     throw new Error("API Key not found");
@@ -114,6 +116,7 @@ export const trendingRecipes = async (searchCuisine: string, page: number) => {
     "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch"
   );
 
+   
   const queryParams = {
     cuisine: searchCuisine,
     number: "15",
@@ -133,4 +136,4 @@ export const trendingRecipes = async (searchCuisine: string, page: number) => {
   } catch (error) {
     console.log(error);
   }
-};
+}; */
