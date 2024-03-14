@@ -5,7 +5,11 @@ import * as RecipeAPI from "./recipe-api";
 const app = express();
 
 app.use(express.json()); // Converts body of requests & responses to JSON
-app.use(cors()); // Allows for cross-origin requests
+app.use(
+  cors({
+    origin: "https://recipe-gzmcj26bs-kurais-projects-2013c57e.vercel.app", // Replace this with your frontend URL
+  })
+); // Allows for cross-origin requests
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log("Server running on localhost:5000"));
