@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json()); // Converts body of requests & responses to JSON
 app.use(
   cors({
-    origin: "https://recipe-gzmcj26bs-kurais-projects-2013c57e.vercel.app", // Replace this with your frontend URL
+    origin: "https://recipe-gzmcj26bs-kurais-projects-2013c57e.vercel.app",
   })
 ); // Allows for cross-origin requests
 
